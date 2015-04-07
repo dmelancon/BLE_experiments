@@ -7,6 +7,7 @@ noble.startScanning([], false); // any service UUID, don't allow duplicates
 
 
 noble.on('discover', function(peripheral){
+	console.log(peripheral);
 	if (peripheral.advertisement.localName == "Dan's BLE") {
 		peripheral.connect(function(error) {
 
